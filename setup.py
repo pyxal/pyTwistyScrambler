@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="pyTwistyScrambler",
-    version="1.6",
+    version="1.7",
     author="euphwes",
     author_email="euphwes@gmail.com",
     packages=setuptools.find_packages(),
@@ -18,10 +18,10 @@ setuptools.setup(
         "Bug Tracker": "https://github.com/euphwes/pyTwistyScrambler/issues",
     },
     install_requires=[
-        'appdirs',
-        'packaging',
-        'PyExecJS',
-        'pyparsing',
-        'six',
+        "appdirs",
+        "packaging",
+        "PyExecJS",
+        "pyparsing",
+        "six",
     ],
 )
