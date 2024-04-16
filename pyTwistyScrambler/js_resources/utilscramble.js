@@ -353,6 +353,8 @@ var util_scramble = (function(rn, rndEl, mega) {
 	function utilscramble(type, len) {
 		var ret = "";
 		switch (type) {
+			case "bicube": // BiCube / Meffert's Bandaged Cube
+			    return bicube(null, 30);
 			case "15p": // 15 puzzle
 				return do15puzzle(false, len);
 			case "15pm": // 15 puzzle, mirrored
@@ -444,6 +446,9 @@ var util_scramble = (function(rn, rndEl, mega) {
 		console.log('Error');
 	}
 
+	function getBicubeScramble() {
+		return utilscramble('bicube', 30);
+	}
 	function getMegaminxWCAScramble(n){
 		return utilscramble("mgmp", n);
 	}
@@ -473,6 +478,7 @@ var util_scramble = (function(rn, rndEl, mega) {
 	}
 
 	return {
+		getBicubeScramble: getBicubeScramble,
 		getMegaminxWCAScramble: getMegaminxWCAScramble,
 		getMegaminxCarrotScramble: getMegaminxCarrotScramble,
 		getMegaminxOldStyleScramble: getMegaminxOldStyleScramble,
